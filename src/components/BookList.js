@@ -5,23 +5,24 @@ function BookList() {
   const books = [
     {
       id: 1,
-      title: 'The Hunger Games',
-      author: 'Suzanne Collins',
-      category: 'Action',
+      title: 'To Kill a Mockingbird',
+      author: 'Harper Lee',
+      category: 'Classic',
     },
     {
       id: 2,
-      title: 'Dune',
-      author: 'Frank Herbert',
-      category: 'Sci-Fi',
+      title: '1984',
+      author: 'George Orwell',
+      category: 'Dystopian',
     },
     {
       id: 3,
-      title: 'The Lord of the Rings',
-      author: 'J.R.R. Tolkien',
-      category: 'History',
+      title: 'Pride and Prejudice',
+      author: 'Jane Austen',
+      category: 'Romance',
     },
   ];
+
   return (
     <div>
       {
