@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import user from '../assets/user.png';
 
 function Navbar() {
@@ -6,14 +7,14 @@ function Navbar() {
     <div className="panel-bg">
       <nav className="navbar">
         <ul className="navItems">
-          <li>
-            <a href="./" className="bookstore-CMS">Bookstore CMS</a>
+          <li className="bookstore-CMS">
+            <Link to="/">Bookstore CMS</Link>
           </li>
-          <li>
-            <a href="./" className="books-nav">Books</a>
+          <li className="books-nav">
+            <Link to="/">Books</Link>
           </li>
-          <li>
-            <a href="./categories" className="categories">Categories</a>
+          <li className="books-nav">
+            <Link to="/categories">Categories</Link>
           </li>
         </ul>
         <div>
