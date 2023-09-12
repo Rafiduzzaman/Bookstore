@@ -58,6 +58,7 @@ function Form() {
       </div>
       <div>
         <Button onClick={handleAddBook} className="addBook" label="Add Book" />
+        {/* Add an onClick event handler  for adding books */}
       </div>
     </div>
   );
