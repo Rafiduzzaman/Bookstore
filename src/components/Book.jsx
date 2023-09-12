@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';// use Dispatch
 import progres from '../assets/progress.gif';
-import { removeBook } from '../redux/books/booksSlice';
+import { removeBook } from '../redux/books/booksSlice';// Use Dispatch
 import Button from './Button';
 
 function Book({ book }) {
@@ -21,6 +21,7 @@ function Book({ book }) {
           </div>
           <div>
             <button type="button" className="book-btn">Comments</button>
+            {/* add button for remove books */}
             <Button onClick={() => handleRemoveBook(book.item_id)} className="removeBtn" label="Remove" />
             <button type="button" className="book-btn">Edit</button>
           </div>
