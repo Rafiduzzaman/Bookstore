@@ -10,9 +10,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      {/* Added Provider  */}
       <Provider store={
-      store
-    }
+        store
+      }
       >
         <App />
       </Provider>
