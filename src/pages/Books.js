@@ -4,8 +4,10 @@ import Form from '../components/Form';
 
 function Books() {
   return (
-    <div>
+    <div className="innerWrapper">
       <BookList />
+      <hr className="hrDivider" />
+      <h2 className="addNewBook">ADD NEW BOOK</h2>
       <Form />
     </div>
   );

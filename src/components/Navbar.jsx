@@ -5,16 +5,16 @@ import user from '../assets/user.png';
 function Navbar() {
   return (
     <div className="panel-bg">
-      <nav className="navbar">
+      <nav className="navbar innerWrapper">
         <ul className="navItems">
-          <li className="bookstore-CMS">
-            <Link to="/">Bookstore CMS</Link>
+          <li>
+            <Link className="bookstore-CMS" to="/">Bookstore CMS</Link>
           </li>
-          <li className="books-nav">
-            <Link to="/">Books</Link>
+          <li>
+            <Link className="books-nav" to="/">Books</Link>
           </li>
-          <li className="books-nav">
-            <Link to="/categories">Categories</Link>
+          <li>
+            <Link className="books-nav" to="/categories">Categories</Link>
           </li>
         </ul>
         <div>

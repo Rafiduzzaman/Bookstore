@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice'; // Import the 'addBook' action
+import { addBookAsync } from '../redux/books/booksSlice';
 import Button from './Button';
 
 function Form() {
   const dispatch = useDispatch();
-  const [title, setTitle] = useState(''); // State for the book title
-  const [author, setAuthor] = useState(''); // State for the author
-  const [category, setCategory] = useState('action'); // State for the book category
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('action');
   function generateUniqueId() {
     const id = Math.random().toString(36).substring(2, 10);
     return id;
@@ -20,20 +20,21 @@ function Form() {
       author,
       category,
     };
-    dispatch(addBook(book));
+    dispatch(addBookAsync(book));
     setTitle('');
     setAuthor('');
     setCategory('action');
   };
 
   return (
-    <div className="pageWrapper bookForm">
+    <div className=" bookForm innerWrapper">
       <div className="bookTitle">
         <input
           type="text"
           placeholder="Book Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          required
         />
       </div>
       <div className="bookAuthor">
@@ -41,7 +42,8 @@ function Form() {
           type="text"
           placeholder="Author"
           value={author}
-          onChange={(e) => setAuthor(e.target.value)} // Handle author input change
+          onChange={(e) => setAuthor(e.target.value)}
+          required
         />
       </div>
       <div className="bookCategory">
@@ -51,14 +53,17 @@ function Form() {
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
-          <option value="action">Action</option>
-          <option value="economy">Economy</option>
-          <option value="scienceFiction">Science Fiction</option>
+          <option value="Business">Business</option>
+          <option value="Human Nature">Human Nature</option>
+          <option value="Love">Love</option>
+          <option value="Academics">Academics</option>
+          <option value="Life Lessons">Life Lessons</option>
+          <option value="Economy">Economy</option>
+          <option value="Science Fiction">Science Fiction</option>
         </select>
       </div>
       <div>
         <Button onClick={handleAddBook} className="addBook" label="Add Book" />
-        {/* Add an onClick event handler  for adding books */}
       </div>
     </div>
   );
