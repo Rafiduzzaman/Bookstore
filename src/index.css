@@ -119,8 +119,6 @@ select {
   color: white;
 }
 
-
-
 /* mobile version */
 @media (width >= 765px) {
   .navItems {
