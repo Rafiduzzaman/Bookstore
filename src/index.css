@@ -21,8 +21,6 @@
 body {
   background-color: #f5f6fa;
   font-family: 'Montserrat', sans-serif;
-  padding-top: 5rem;
-  width: 100vw;
 }
 
 li {
@@ -38,7 +36,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 100%;
   z-index: 1000;
 }
 
@@ -119,7 +117,7 @@ select {
   color: white;
 }
 
-/* mobile version */
+/* desktop version */
 @media (width >= 765px) {
   .navItems {
     display: flex;
@@ -151,6 +149,7 @@ select {
     line-height: normal;
     letter-spacing: normal;
     color: #0290ff;
+    white-space: nowrap;
   }
 
   .books-nav {
@@ -166,7 +165,7 @@ select {
 
   .pageWrapper {
     margin: auto;
-    width: 80vw;
+    width: 100vw;
     background-color: #fafafa;
     border-radius: 4px;
     box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.2);
@@ -175,6 +174,10 @@ select {
   .innerWrapper {
     width: 90%;
     margin: auto;
+  }
+
+  .navbar {
+    width: 95%;
   }
 
   .bookPanelBg {
@@ -266,6 +269,7 @@ select {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 40%;
   }
 
   .progressImg {
@@ -294,6 +298,7 @@ select {
   .bookStage {
     display: flex;
     flex-direction: column;
+    width: 50%;
   }
 
   .currentChapter {
@@ -306,6 +311,7 @@ select {
     letter-spacing: normal;
     margin-bottom: 0.6rem;
     color: var(--black-three);
+    white-space: nowrap;
   }
 
   .chapter {
@@ -318,6 +324,7 @@ select {
     letter-spacing: normal;
     color: var(--black-three);
     margin-bottom: 1.5rem;
+    white-space: nowrap;
   }
 
   .updateBtn {
@@ -350,6 +357,10 @@ select {
     height: 2.5rem;
     border-radius: 3px;
     font-family: 'Roboto Slab', serif;
+  }
+
+  .bookForm {
+    width: 100%;
   }
 
   select {

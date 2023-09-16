@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import progres from '../assets/progress.gif';
+import progres from '../assets/progress.png';
 import { removeBookAsync } from '../redux/books/booksSlice';
 import Button from './Button';
 
